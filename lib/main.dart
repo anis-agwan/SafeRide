@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:safe_ride/view/SplashScreen/splash_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -8,7 +9,7 @@ void main() async {
       theme: ThemeData(
        primarySwatch: Colors.blue
       ),
-      home: Scaffold(appBar: AppBar(title: const Text("Safe Ride App"),),)
+      home: const MySplashScreen()
     )
   ));
 }
@@ -16,14 +17,14 @@ void main() async {
 class MyApp extends StatefulWidget {
   final Widget? child;
 
-  MyApp({this.child});
+  const MyApp({this.child});
 
   static void restartApp(BuildContext context) {
     context.findAncestorStateOfType<_MyAppState>()!.restartApp();
   }
 
 
-  @override
+  @override 
   State<MyApp> createState() => _MyAppState();
 }
 
